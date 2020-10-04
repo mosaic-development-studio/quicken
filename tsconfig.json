@@ -8,7 +8,7 @@
     "strict": true,
     "strictNullChecks": true,
     "target": "ESNEXT",
-    // "jsx": "react",
+    "jsx": "react",
     "allowJs": true
   },
   "include": ["src/**/*"],
