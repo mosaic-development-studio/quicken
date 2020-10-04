@@ -8,7 +8,7 @@ module.exports = {
     rules: [
       {
         exclude: /node_modules/,
-        test: /\.ts$/,
+        test: /\.(ts|tsx)$/,
         use: ['babel-loader', 'ts-loader']
       }
     ]
@@ -17,8 +17,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.bundle.js'
   },
-  plugins: [new HTMLWebpackPlugin()],
+  plugins: [new HTMLWebpackPlugin({
+    title: 'Quicken Template'
+  })],
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   }
 };
